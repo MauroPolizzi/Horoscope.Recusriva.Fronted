@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm px-3">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Botón de volver -->
+    <button 
+      *ngIf="showBackButton" 
+      class="btn me-2 text-start" 
+      (click)="goBack()">
+      <i class="bi bi-arrow-left pe-2"></i>Volver</button>
+
+    <!-- Título centrado -->
+    <span class="navbar-brand mx-auto text-center fw-semibold">
+      {{ title }}
+    </span>
+
+    <!-- Acciones personalizadas (ej. botones a la derecha) -->
+    <div class="d-flex align-items-center">
+      <ng-content select="[navbar-actions]"></ng-content>
+    </div>
+  </div>
+</nav>

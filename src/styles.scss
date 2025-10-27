@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #fe6d1a;
+  --accent: #007bff;
+  --bg: #ffffff;
+  --text: #222;
+}
+
+body {
+  font-family: Inter, Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  width: 50%;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+
+  &.button-primary {
+    background: var(--primary);
+  }
+
+  &.button-accent {
+    background: var(--accent);
+  }
+}
+

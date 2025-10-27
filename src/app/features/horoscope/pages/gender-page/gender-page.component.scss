@@ -1,0 +1,25 @@
+$image-size: 150px;
+$transition-speed: 0.3s;
+$selected-color: #007bff;
+$hover-shadow: rgba(0, 0, 0, 0.3);
+$selected-shadow: rgba(0, 123, 255, 0.8);
+
+img {
+    width: $image-size;
+    height: $image-size;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform $transition-speed ease, box-shadow $transition-speed ease, border $transition-speed ease;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px $hover-shadow;
+    }
+
+    &.selected {
+      border: 3px solid $selected-color;
+      box-shadow: 0 0 10px $selected-shadow;
+      transform: scale(1.05);
+    }
+}

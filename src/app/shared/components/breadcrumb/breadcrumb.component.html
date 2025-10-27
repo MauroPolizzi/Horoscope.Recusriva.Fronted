@@ -1,0 +1,13 @@
+<nav class="breadcrumb">
+  <ul>
+    <li *ngFor="let step of steps; let i = index" 
+        [class.active]="i + 1 === currentStep"
+        [class.completed]="i + 1 < currentStep">
+      <span class="step-number"></span>
+      <span class="step-label">{{ step }}</span>
+
+      <!-- Flecha entre pasos -->
+      <span *ngIf="i < steps.length - 1" class="separator"></span>
+    </li>
+  </ul>
+</nav>

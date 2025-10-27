@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="container text-center">
+    <div class="row">
+        <h3>Signos mas buscados</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Signo</th>
+                    <th scope="col">Veces que se busco</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of dataStatistic; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ item.sing }}</td>
+                    <td>{{ item.searchCounter }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="row">
+        <h3>Historial de consultas</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Persona</th>
+                    <th scope="col">Signo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">Fecha de solicitud</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of dataHistory; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.sign }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.birthDate }}</td>
+                    <td>{{ item.dateQueried }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

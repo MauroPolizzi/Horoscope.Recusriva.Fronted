@@ -1,0 +1,57 @@
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  font-family: Arial, sans-serif;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: #999;
+      transition: color 0.3s ease;
+
+      .step-number {
+        background-color: #ddd;
+        color: #333;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      &.active {
+        color: #007bff;
+
+        .step-number {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+
+      &.completed {
+        color: #007bff;
+
+        .step-number {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+
+      .separator {
+        margin: 0 0.75rem;
+        color: #ccc;
+      }
+    }
+  }
+}

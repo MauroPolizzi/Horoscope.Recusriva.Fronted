@@ -1,27 +1,57 @@
-# HoroscopeRecursiva
+## Horoscope.Recursiva.Backend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
+Pasos a seguir para ejecutar y probar el proyecto.
 
-## Development server
+📋 Descripción
+Este proyecto es una aplicación frontend desarrollada con Angular 18 y TypeScript 5.4, que consume los servicios expuestos por la API de Horoscope,Api (.NET 8).
+Implementa una arquitectura modular, componentes reutilizables, servicios centralizados para comunicación HTTP y gestión de estado, y un diseño responsivo con Bootstrap 5.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🚀 Requisitos previos
+Antes de ejecutar el proyecto, asegurate de tener instalado lo siguiente:
+| Herramienta                               | Versión recomendada | Comando para verificar |
+| ----------------------------------------- | ------------------- | ---------------------- |
+| [Node.js](https://nodejs.org/en/download) | 20.x o superior     | `node -v`              |
+| [npm](https://www.npmjs.com/get-npm)      | 10.x o superior     | `npm -v`               |
+| [Angular CLI](https://angular.dev/)       | 18.x                | `ng version`           |
+| [Git](https://git-scm.com/)               | —                   | `git --version`        |
 
-## Code scaffolding
+📦 Instalación del proyecto
+1️⃣ Clonar el repositorio
+git clone https://github.com/tu-usuario/tu-repositorio-frontend.git
+cd tu-repositorio-frontend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2️⃣ Instalar dependencias
+npm install
 
-## Build
+⚙️ Configuración de entorno
+3️⃣ Configurar la URL de la API
+Edita src/core/services/api.service.ts con la URL base de tu API local (la de tu proyecto NET. cambiar solo el puerto):
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+▶️ Ejecución del proyecto
+4️⃣ Servir la aplicación en modo desarrollo
+ng serve
 
-## Running unit tests
+La aplicación se ejecutará por defecto en:
+http://localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+💡 Si deseas cambiar el puerto:
+ng serve --port 4300
 
-## Running end-to-end tests
+🧩 Integración con el Backend (.NET 8)
+Asegúrate de que la API .NET 8 esté ejecutándose antes de levantar el frontend.
+Si ambos proyectos están en local:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+| Proyecto           | URL local                                        |
+| ------------------ | ------------------------------------------------ |
+| API (.NET 8)       | [https://localhost:5001](https://localhost:5001) |
+| Frontend (Angular) | [http://localhost:4200](http://localhost:4200)   |
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🧑‍💻 Tecnologías utilizadas
+Angular 18
+TypeScript 5.4
+RxJS
+Bootstrap 5
+SCSS
+Angular Router
+HttpClient
+LocalStorage / SessionStorage
